@@ -1,5 +1,11 @@
 # ILA Shashank
 
+## Guidelines
+
+[1] Using Assignments code as Asgn-xx for commits and branches
+[2] Using Frontend and backend seperate folders to keep logic seperate
+[3] maintaing Readme in folders
+
 ## Asgn. 01 : Steps to setup
 
 1. Created a Github Repository to have all the codebase
