@@ -1,0 +1,6 @@
+# Logs directory (created by start-all.sh script)
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
