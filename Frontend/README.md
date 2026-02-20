@@ -1,16 +1,44 @@
-# React + Vite
+# ILA Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React application built with Vite.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Make sure you have Node.js installed (use `nvm use v20.19.6` as specified in project guidelines)
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## React Compiler
+## Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Start the development server:
+```bash
+npm run dev
+```
 
-## Expanding the ESLint configuration
+The app will be available at `http://localhost:5173/`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- **Health Check Page**: Displays the backend health status by calling `http://localhost:4000/health`
+  - Shows loading state while fetching
+  - Displays status when successful
+  - Shows error message if the backend is unavailable
+  - Includes refresh/retry functionality
+
+## Backend Integration
+
+The frontend calls the backend API at `http://localhost:4000/health`. Make sure the Rails backend is running on port 4000 before testing the health check.
+
+## Build
+
+Build for production:
+```bash
+npm run build
+```
+
+Preview production build:
+```bash
+npm run preview
+```
